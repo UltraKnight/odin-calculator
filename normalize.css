@@ -1,0 +1,63 @@
+/* Document */
+html {
+  line-height: 1.15; /* Correct the line height in all browsers. */
+  -webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. */
+}
+
+/* Sections */
+body {
+  margin: 0; /* Remove the margin in all browsers. */
+}
+
+main {
+  display: block; /* Render the `main` element consistently in IE. */
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; /* Correct the font size and margin on `h1` elements within `section` and `article` contexts. */
+}
+
+/* Forms */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* Correct the font styles in all browsers. */
+  font-size: 100%; /* Correct the font size in all browsers. */
+  line-height: 1.15; /* Correct the line height in all browsers. */
+  margin: 0; /* Remove the margin in Firefox and Safari. */
+}
+
+/* Text-level semantics */
+abbr[title] {
+  border-bottom: none; /* Remove the bottom border in Chrome 57-. */
+  text-decoration: underline; /* Add the correct text decoration. */
+  text-decoration: underline dotted;
+}
+
+small {
+  font-size: 80%; /* Add the correct font size in all browsers. */
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content */
+img {
+  border-style: none; /* Remove the border on images inside links in IE 10. */
+}
