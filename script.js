@@ -46,7 +46,7 @@ function operate(operator, n1, n2) {
     default:
       break;
   }
-  return Number(res.toFixed(10));
+  return Number(res.toFixed(2));
 }
 
 function initCalc() {
