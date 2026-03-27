@@ -56,10 +56,11 @@ function initCalc() {
   let result = '0';
   let lastInput = '';
   let operator = null;
+  let lastButton = null;
 
   main.addEventListener('click', (e) => {
-    if (e.target?.id  === e.currentTarget.id) return;
-    
+    if (e.target?.id === e.currentTarget.id) return;
+
     const value = e.target.id;
 
     if (!isNaN(value)) {
@@ -86,7 +87,8 @@ function initCalc() {
               Number(lastInput),
             ).toString();
             screen.textContent = result;
-            lastInput = '';
+          } else {
+            screen.textContent = result;
           }
           break;
         case '.':
@@ -94,18 +96,20 @@ function initCalc() {
           screen.textContent = lastInput;
           break;
         default:
-          if (lastInput && operator && result != '0') {
+          if (lastInput && operator && result != '0' && lastButton !== 'eq') {
             result = operate(operator, +result, +lastInput).toString();
             screen.textContent = result;
             operator = value;
           } else {
             operator = value;
             result == '0' && (result = lastInput);
-            lastInput = '';
           }
+          lastInput = '';
           break;
       }
     }
+
+    lastButton = value;
   });
 }
 
