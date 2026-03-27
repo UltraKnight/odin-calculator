@@ -46,7 +46,6 @@ function operate(operator, n1, n2) {
     default:
       break;
   }
-  console.log(res);
   return Number(res.toFixed(10));
 }
 
@@ -59,6 +58,8 @@ function initCalc() {
   let operator = null;
 
   main.addEventListener('click', (e) => {
+    if (e.target?.id  === e.currentTarget.id) return;
+    
     const value = e.target.id;
 
     if (!isNaN(value)) {
@@ -94,7 +95,6 @@ function initCalc() {
           break;
         default:
           if (lastInput && operator && result != '0') {
-            console.log(lastInput, operator, result);
             result = operate(operator, +result, +lastInput).toString();
             screen.textContent = result;
             operator = value;
